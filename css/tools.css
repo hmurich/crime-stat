@@ -1,0 +1,291 @@
+a.mapToolUp, a.mapToolDown {
+    height: 24px;
+    width: 72px;
+    display: block;
+    z-index: 95;
+    background-color: #f5f5f5;
+    padding: 2px;
+}
+
+a.mapToolUp {
+    top: 0px;
+    position: relative;
+}
+
+a.mapToolDown {
+    border-top: 1px solid #cccccc;
+    bottom: 0px;
+    position: fixed;
+}
+
+.mapToolBar {
+    position: relative;
+    z-index: 15;
+}
+
+.mapToolBar li {
+    list-style: none;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    border-top: 1px solid #cccccc;
+}
+
+.mapToolTitle, .mapToolTitle-9, .mapToolTitle-10 {
+    font-weight: bold;
+    font-size: 12px;
+    white-space: nowrap
+}
+
+.mapToolTitle-9 {
+    font-size: 9px;
+}
+
+.mapToolTitle-10 {
+    font-size: 10px;
+}
+
+a.mapToolFilter, a.mapToolType, a.mapToolPrint, a.mapToolMail, a.mapToolFeedBack, a.mapToolStatistic,
+a.mapToolInfo, a.mapToolAaddress, a.mapToolPeriod, a.mapToolView, a.mapToolSlide,  a.mapToolRule  {
+    height: 48px;
+    width: 48px;
+    display: block;
+    margin: 0 auto;
+    background-size: 44px;
+    background-position: center!important;
+}
+
+a.mapToolRule {
+    background: url(../images/tools/tool-rule.png) no-repeat;
+}
+
+a.mapToolFilter {
+    background: url(../images/new-setting.png) no-repeat;
+    background-size: 44px;
+    background-position: center;
+}
+
+a.mapToolType {
+    background: url(../images/gps.png) no-repeat;
+    background-size: 44px;
+    background-position: center;
+}
+
+a.mapToolPrint {
+    background: url(../images/printer.png) no-repeat;
+    background-size: 44px;
+}
+
+a.mapToolSlide {
+    background: url(../images/tools/tool-slide.png) no-repeat;
+}
+
+a.mapToolInfo {
+    background: url(../images/tools/tool-about.png) no-repeat;
+}
+
+a.mapToolStatistic {
+    background: url(../images/statistic.png) no-repeat;
+    background-size: 44px;
+    background-position: center;
+}
+
+a.mapToolFeedBack {
+    background: url(../images/reviews.png) no-repeat;
+    background-size: 44px;
+}
+
+a.mapToolMail {
+    background: url(../images/email.png) no-repeat;
+    background-size: 44px;
+}
+
+.mapToolAaddress {
+    background: url(../images/map-new.png) no-repeat;
+    background-size: 44px;
+    background-position: center;
+}
+
+a.mapToolView {
+    background: url(../images/tools/tool-view.png) no-repeat;
+}
+
+a.mapToolPeriod {
+    background: url(../images/calendar-new.png) no-repeat;
+    background-size: 44px;
+    background-position: center;
+}
+
+/*a.mapToolFilter:hover:not([title=""]), a.mapToolType:hover:not([title=""]), a.mapToolFeedBack:hover:not([title=""]),
+a.mapToolPrint:hover:not([title=""]), a.mapToolMail:hover:not([title=""]), a.mapToolView:hover:not([title=""]),
+a.mapToolInfo:hover:not([title=""]), a.mapToolAaddress:hover:not([title=""]), a.mapToolSlide:hover:not([title=""]),
+a.mapToolStatistic:hover:not([title=""]), a.mapToolPeriod:hover:not([title=""]) {
+    background-position: 0 -48px !important;
+}*/
+
+a.mapToolSelected {
+    background-position: 0 -96px !important;
+}
+
+.location {
+    background-image: url(../images/tools/tool-location.png);
+    width: 16px;
+    height: 16px;
+}
+
+.round-button, round-button-info {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    vertical-align: middle;
+    text-align: left;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, .12), 0 5px 10px -3px rgba(0, 0, 0, .3);
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, .12), 0 5px 10px -3px rgba(0, 0, 0, .3);
+}
+
+.round-button-info {
+    border-radius: 50px 0px 0px 50px;
+    background-color: #000080;
+}
+
+.info-button, .location-button, .full-size-button, .zoom-in-button, .zoom-out-button, .location-button-active,
+.overview-map-button, .overview-map-button-visible, .play-button, .enable-prev-button, .disable-prev-button,
+.enable-next-button, .disable-next-button, .exit-button, .pause-button, .disable-exit-button, .disable-play-button {
+    height: 50px;
+    width: 50px;
+}
+
+.pause-button {
+    background: url(../images/tools/tool-pause.png) center center no-repeat;
+}
+
+.play-button {
+    background: url(../images/tools/tool-play.png) center center no-repeat;
+}
+
+.disable-play-button {
+    background: url(../images/tools/tool-play-disable.png) center center no-repeat;
+}
+
+.enable-prev-button {
+    background: url(../images/tools/tool-prev.png) center center no-repeat;
+}
+
+.disable-prev-button {
+    background: url(../images/tools/tool-prev-disable.png) center center no-repeat;
+}
+
+.enable-next-button {
+    background: url(../images/tools/tool-next.png) center center no-repeat;
+}
+
+.disable-next-button {
+    background: url(../images/tools/tool-next-disable.png) center center no-repeat;
+}
+
+.exit-button {
+    background: url(../images/tools/tool-exit.png) center center no-repeat;
+}
+
+.disable-exit-button {
+    background: url(../images/tools/tool-exit-disable.png) center center no-repeat;
+}
+
+.overview-map-button {
+    background: url(../images/tools/tool-overview-map-hidden.png) center center no-repeat;
+}
+
+.overview-map-button-visible {
+    background: url(../images/tools/tool-overview-map-visible.png) center center no-repeat;
+}
+
+.info-button {
+    background: url(../images/tools/tool-info.png) center center no-repeat;
+}
+
+.location-button {
+    background: url(../images/tools/tool-location.png) center center no-repeat;
+}
+
+.location-button-active {
+    background: url(../images/tools/tool-location-active.png) center center no-repeat;
+}
+
+.full-size-button {
+    background: url(../images/tools/tool-full-map.png) center center no-repeat;
+}
+
+.zoom-in-button {
+    background: url(../images/tools/tool-zoom-in.png) center center no-repeat;
+}
+
+.zoom-out-button {
+    background: url(../images/tools/tool-zoom-out.png) center center no-repeat;
+}
+
+.tree-lvl-country, .tree-lvl-city, .tree-lvl-area {
+    height: 16px;
+    width: 16px;
+}
+
+.tree-lvl-country {
+    background: url(../images/tools/tree-lvl-country.png) center center no-repeat;
+}
+
+.tree-lvl-city {
+    background: url(../images/tools/tree-lvl-city.png) center center no-repeat;
+}
+
+.tree-lvl-area {
+    background: url(../images/tools/tree-lvl-area.png) center center no-repeat;
+}
+
+.status-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.status-cell-a {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 3px 15px 3px 15px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+#infoMarker {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    z-index: 100;
+}
+
+#infoDiv {
+    overflow-y: scroll;
+    position: absolute;
+    right: -325px;
+    width: 300px;
+    height: 95%;
+    padding: 10px;
+    text-align: left;
+
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+
+    -webkit-border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    border-radius: 5px 0 0 5px;
+    background: #f5f5f5;
+    border: 2px solid #cccccc;
+    z-index: 99;
+}

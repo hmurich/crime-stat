@@ -1,0 +1,12 @@
+.status-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.status-cell-a {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 3px 15px 3px 15px;
+    text-decoration: none;
+}

@@ -1,0 +1,21 @@
+define({
+    aBack: "Вернуться к карте",
+    mtHome: "Статистика по уголовным правонарушениям",
+    lblPeriod: "Период",
+    lblDate: "C начала года по",
+    lblFilter: "Фильтр",
+    applyFilter: "Применить",
+    lblRegion: "Регион",
+    tableTab: "Таблица",
+    comparativeChartTab: "Сравнительная диаграмма",
+    lblComparativeDate: "Дата",
+    dynamicChartTab: "Динамика",
+    lblReg: "Регион",
+    tblColName: "Наименование",
+    tblColK: "Общее кол-во ",
+    tblColK10: "Кол-во на 10 тыс.чел. ",
+    regionRK: "Республика Казахстан",
+    dynamicChart: "Динамика за 3 года",
+    tableTitle0: "Количество ",
+    tableTitle1: " с начала года"
+});

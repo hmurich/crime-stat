@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html style="overflow: auto;">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=0.4"/>
+    <link rel="shortcut icon" href="images/logo-small.png" type="image/png">
+    <title>Карта уголовных правонарушений</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/png"/>
+    <link rel="stylesheet" href="flat/flat.css">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/statistic.css"/>
+    <link rel="stylesheet" href="css/param.css"/>
+</head>
+<body class="flat" style="overflow: auto; height: auto; width: auto;">
+    <div id="workspace">
+        <div id="title" style="position: fixed; z-index: 100;">
+            <a id="aBack" href="index.html" title="Вернуться к карте" class="back">
+                <img src="images/tools/arrow-back.png" width="32" height="32"/>
+            </a>
+            <div id="logo">
+                <img src="images/logo-big.png" width="60px" height="60px" style="padding-top: 4px;">
+            </div>
+            <a id="mtHome" style="width: auto;" href="index.html">Статистика по уголовным правонарушениям</a>
+
+            <div class="social-networks">
+                <div class="external-link">
+                    <a id="a-lang-kz" href="javascript:void(0)" class="round-link transparent">
+                        <div id="lang-kz" class="lang-kz"></div>
+                    </a>
+                </div>
+                <div class="external-link">
+                    <a id="a-lang-ru" href="javascript:void(0)" class="round-link transparent">
+                        <div id="lang-ru" class="lang-ru"></div>
+                    </a>
+                </div>
+                <div class="external-link">
+                    <a id="a-lang-en" href="javascript:void(0)" class="round-link transparent">
+                        <div id="lang-en" class="lang-en"></div>
+                    </a>
+                </div>
+                <div class="external-link">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="statistik-body">
+        <div class="statistik-body-sidebar">
+            <div class="statistik-sidebar-head">
+                Показатели
+            </div>
+           <div class="date-filtr">
+                <label class="label-statistic">Выберите дату:</label>
+                <input type="" name="" id="datepicker" class="datepicker" placeholder="Выберите дату">
+            </div>
+
+            <div class="statistik-sidebar-body">
+                <div class="search">
+                    <input class="search-side-bar" placeholder="Поиск"/>
+                </div>
+                <ul class="statistik-list">
+                    <li>
+                        <input type="checkbox" name="" id="0">
+                        <label for="0">Все</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1">
+                        <label for="1">Небольшой тяжести</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2">
+                        <label for="2">Средней тяжести</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="3">
+                        <label for="3">Тяжкие</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="4">
+                        <label for="4">Особо тяжкие</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="5">
+                        <label for="5">Преступления</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="6">
+                        <label for="6">Проступки</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="0990">
+                        <label for="0990">Убийство (ст.99)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1000">
+                        <label for="1000">Убийство матерью новорожденного ребенка (ст.100)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox"  id="1010">
+                        <label for="1010">Убийство, совершенное в состоянии аффекта (ст.101)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1020">
+                        <label for="1020">Убийство, совершенное при превышении пределов необходимой обороны (ст.102)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1030">
+                        <label for="1030">Убийство, совершенное при превышении мер, необходимых для задержания лица, совершившего преступление (ст.103)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1040">
+                        <label for="1040">Причинение смерти по неосторожности (ст.104)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1060">
+                        <label for="1060">Умышленное причинение тяжкого вреда здоровью (ст.106)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1070">
+                        <label for="1070">Умышленное причинение средней тяжести вреда здоровью (ст.107)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1200">
+                        <label for="1200">Изнасилование (ст.120)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1210">
+                        <label for="1210">Насильственные действия сексуального характера (ст.121)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1220">
+                        <label for="1220">Половое сношение или иные действия сексуального характера с лицом, не достигшим шестнадцатилетия (ст.122)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1240">
+                        <label for="1240">Развращение малолетних (ст.124)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1250">
+                        <label for="1250">Похищение человека (ст.125)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1320">
+                        <label for="1320">Вовлечение несовершеннолетнего в совершение уголовных правонарушений (ст.132)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1880">
+                        <label for="1880">Кража (ст.188)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1900">
+                        <label for="1900">Мошенничество (ст.190)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1910">
+                        <label for="1910">Грабеж (ст.191)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1920">
+                        <label for="1920">Разбой (ст.192)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="1940">
+                        <label for="1940">Вымогательство (ст.194)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2000">
+                        <label for="2000">Неправомерное завладение автомобилем или иным транспортным средством без цели хищения (ст.200)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2020">
+                        <label for="2020">Умышленное уничтожение или повреждение чужого имущества (ст.202)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2030">
+                        <label for="2030">Умышленное уничтожение или повреждение предметов, имеющих особую ценность (ст.203))</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2550">
+                        <label for="2550">Акт терроризма (ст.255)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2560">
+                        <label for="2560">Пропаганда терроризма или публичные призывы к совершению акта терроризма (ст.256)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2570">
+                        <label for="2570">Создание, руководство террористической группой и участие в ее деятельности (ст.257)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2580">
+                        <label for="2580">Финансирование террористической или экстремистской деятельности и иное пособничество терроризму (ст.258)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2620">
+                        <label for="2620">Создание и руководство организованной группой, преступной организацией, а равно участие в них (ст.262)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2680">
+                        <label for="2680">Бандитизм (ст.268)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2730">
+                        <label for="2730">Заведомо ложное сообщение об акте терроризма (ст.273)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2930">
+                        <label for="2930">Хулиганство (ст.293)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2940">
+                        <label for="2940">Вандализм (ст.294)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2960">
+                        <label for="2960">Незаконное обращение с наркотическими средствами, психотропными веществами, их аналогами, прекурсора (ст.296)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2970">
+                        <label for="2970">Незаконные изготовление, переработка, приобретение, хранение, перевозка в целях сбыта, пересылка (ст.297)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2980">
+                        <label for="2980">Хищение либо вымогательство наркотических средств, психотропных веществ, их аналогов (ст.298)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="2990">
+                        <label for="2990">Склонение к потреблению наркотических средств, психотропных веществ, их аналогов (ст.299)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="3020">
+                        <label for="3020">Организация или содержание притонов для потребления наркотических средств, психотропных веществ (ст.302)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="3450">
+                        <label for="3450">Нарушение правил дорожного движения или эксплуатации транспортных средств (ст.345)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="3840">
+                        <label for="3840">Незаконное изъятие документов, похищение, уничтожение, повреждение или сокрытие документов, штампов(ст.384)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="3850">
+                        <label for="3850">Подделка, изготовление или сбыт поддельных документов, штампов, печатей, бланков (ст.385)</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="statistik-content">
+            <div class="tabs">
+                <div class="statistik-content-head">
+                    <ul class="breadcrumbs">
+                        <li><a href="http://infopublic.pravstat.kz/">Главная</a></li>
+                        <li><a href="http://infopublic.pravstat.kz/crime/">Карта уголовных правонарушений</a></li>
+                        <li>Статистика</li>
+                    </ul>
+                    <div class="title-statics">
+                        Статистика по уголовным правонарушениям  Убийство (ст.99)
+                    </div>
+                    <div class="statistik-content-head-top">
+                        <div class="statistik-content-head-top-left">
+                            <ul class="tabs-head">
+                                <li class="active">
+                                    Карта
+                                </li>
+                                <li>
+                                    Диаграмма
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="statistik-content-head-top-right">
+                            <div class="button-stats">
+                                Всего по региону
+                            </div>
+                            <div class="button-stats">
+                                На 10.000 населения
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-body">
+                    <div class="tabs-body__item active">
+                        <div w3-include-html="map/allrepublic.html"></div>
+                    </div>
+                    <div class="tabs-body__item">
+                        <div id="chart-bar_1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+           elmnt.className  += ' map';
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+}
+</script>
+<script>
+includeHTML();
+</script>
+<script src="js/jquery.js"></script>
+<script src="js/my.js"></script>
+<script src="js/data_control.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/diagramm.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+
+<script src="js/jquery-ui-1.js"></script>
+
+ <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+    ( function( factory ) {
+    if ( typeof define === "function" && define.amd ) {
+
+        // AMD. Register as an anonymous module.
+        define( [ "../widgets/datepicker" ], factory );
+    } else {
+
+        // Browser globals
+        factory( jQuery.datepicker );
+    }
+}( function( datepicker ) {
+
+datepicker.regional.ru = {
+    closeText: "Закрыть",
+    prevText: "&#x3C;Пред",
+    nextText: "След&#x3E;",
+    currentText: "Сегодня",
+    monthNames: [ "Январь","Февраль","Март","Апрель","Май","Июнь",
+    "Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь" ],
+    monthNamesShort: [ "Янв","Фев","Мар","Апр","Май","Июн",
+    "Июл","Авг","Сен","Окт","Ноя","Дек" ],
+    dayNames: [ "воскресенье","понедельник","вторник","среда","четверг","пятница","суббота" ],
+    dayNamesShort: [ "вск","пнд","втр","срд","чтв","птн","сбт" ],
+    dayNamesMin: [ "Вс","Пн","Вт","Ср","Чт","Пт","Сб" ],
+    weekHeader: "Нед",
+    dateFormat: "dd.mm.yy",
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: "" };
+datepicker.setDefaults( datepicker.regional.ru );
+
+return datepicker.regional.ru;
+
+} ) );
+  } );
+  </script>
+
+</body>
+</html>
