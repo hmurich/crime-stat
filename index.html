@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/statistic.css"/>
     <link rel="stylesheet" href="css/param.css"/>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
 </head>
 <body class="flat" style="overflow: auto; height: auto; width: auto;">
     <div id="workspace">
         <div id="title" style="position: fixed; z-index: 100;">
-            <a id="aBack" href="index.html" title="Вернуться к карте" class="back">
+            <a id="aBack" href="#back" title="Вернуться к карте" class="back">
                 <img src="images/tools/arrow-back.png" width="32" height="32"/>
             </a>
             <div id="logo">
@@ -51,13 +53,10 @@
             </div>
            <div class="date-filtr">
                 <label class="label-statistic">Выберите дату:</label>
-                <input type="" name="" id="datepicker" class="datepicker" placeholder="Выберите дату">
+                <input id="datepicker" class="datepicker" placeholder="Выберите дату">
             </div>
 
-            <div class="statistik-sidebar-body">
-                <div class="search">
-                    <input class="search-side-bar" placeholder="Поиск"/>
-                </div>
+            <div class="statistik-sidebar-body" style="border-bottom: 5px solid #c0c0c0;">
                 <ul class="statistik-list">
                     <li>
                         <input type="checkbox" name="" id="0">
@@ -87,6 +86,10 @@
                         <input type="checkbox" name="" id="6">
                         <label for="6">Проступки</label>
                     </li>
+                </ul>
+            </div>
+            <div class="statistik-sidebar-body">
+                <ul class="statistik-list">
                     <li>
                         <input type="checkbox" name="" id="0990">
                         <label for="0990">Убийство (ст.99)</label>
@@ -255,7 +258,7 @@
                         <li>Статистика</li>
                     </ul>
                     <div class="title-statics">
-                        Статистика по уголовным правонарушениям  Убийство (ст.99)
+                        Статистика по правонарушениям  <span>Убийство (ст.99)</span>
                     </div>
                     <div class="statistik-content-head-top">
                         <div class="statistik-content-head-top-left">
@@ -290,90 +293,13 @@
         </div>
     </div>
 
+    <script src="lib_js/jquery.js"></script>
+    <script src="lib_js/highcharts.js"></script>
+    <script src="lib_js/jquery-ui-1.js"></script>
 
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-           elmnt.className  += ' map';
-          includeHTML();
-        }
-      }
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-}
-</script>
-<script>
-includeHTML();
-</script>
-<script src="js/jquery.js"></script>
-<script src="js/my.js"></script>
-<script src="js/data_control.js"></script>
-<script src="js/highcharts.js"></script>
-<script src="js/diagramm.js"></script>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
-
-<script src="js/jquery-ui-1.js"></script>
-
- <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-    ( function( factory ) {
-    if ( typeof define === "function" && define.amd ) {
-
-        // AMD. Register as an anonymous module.
-        define( [ "../widgets/datepicker" ], factory );
-    } else {
-
-        // Browser globals
-        factory( jQuery.datepicker );
-    }
-}( function( datepicker ) {
-
-datepicker.regional.ru = {
-    closeText: "Закрыть",
-    prevText: "&#x3C;Пред",
-    nextText: "След&#x3E;",
-    currentText: "Сегодня",
-    monthNames: [ "Январь","Февраль","Март","Апрель","Май","Июнь",
-    "Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь" ],
-    monthNamesShort: [ "Янв","Фев","Мар","Апр","Май","Июн",
-    "Июл","Авг","Сен","Окт","Ноя","Дек" ],
-    dayNames: [ "воскресенье","понедельник","вторник","среда","четверг","пятница","суббота" ],
-    dayNamesShort: [ "вск","пнд","втр","срд","чтв","птн","сбт" ],
-    dayNamesMin: [ "Вс","Пн","Вт","Ср","Чт","Пт","Сб" ],
-    weekHeader: "Нед",
-    dateFormat: "dd.mm.yy",
-    firstDay: 1,
-    isRTL: false,
-    showMonthAfterYear: false,
-    yearSuffix: "" };
-datepicker.setDefaults( datepicker.regional.ru );
-
-return datepicker.regional.ru;
-
-} ) );
-  } );
-  </script>
+    <script src="new_js/datepicker.js"></script>
+    <script src="new_js/map_control.js"></script>
+    <script src="new_js/diagramm.js"></script>
 
 </body>
 </html>
