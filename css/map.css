@@ -1,0 +1,12 @@
+
+
+.land {
+    fill: #9bc6df;
+    fill-opacity: 1;
+    cursor: pointer;
+    stroke: 1px solid #D66700;
+    stroke: #fff;
+    stroke-width: 3px;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}

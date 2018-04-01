@@ -11,8 +11,12 @@
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/statistic.css"/>
     <link rel="stylesheet" href="css/param.css"/>
+    <link rel="stylesheet" href="css/map.css"/>
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+
+    <script src="lib_js/include.js"></script>
+
 </head>
 <body class="flat" style="overflow: auto; height: auto; width: auto;">
     <div id="workspace">
@@ -56,50 +60,50 @@
                 <input id="datepicker" class="datepicker" placeholder="Выберите дату">
             </div>
 
-            <div class="statistik-sidebar-body" style="border-bottom: 5px solid #c0c0c0;">
-                <ul class="statistik-list">
+            <div class="statistik-sidebar-body" style="border-bottom: 5px solid #c0c0c0;" id='type_list'>
+                <ul class="statistik-list" >
                     <li>
-                        <input type="checkbox" name="" id="0">
+                        <input type="checkbox" name="type" id="0">
                         <label for="0">Все</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="" id="1">
+                        <input type="checkbox" name="type" id="1">
                         <label for="1">Небольшой тяжести</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="" id="2">
+                        <input type="checkbox" name="type" id="2">
                         <label for="2">Средней тяжести</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="" id="3">
+                        <input type="checkbox" name="type" id="3">
                         <label for="3">Тяжкие</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="" id="4">
+                        <input type="checkbox" name="type" id="4">
                         <label for="4">Особо тяжкие</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="" id="5">
+                        <input type="checkbox" name="type" id="5">
                         <label for="5">Преступления</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="" id="6">
+                        <input type="checkbox" name="type" id="6">
                         <label for="6">Проступки</label>
                     </li>
                 </ul>
             </div>
-            <div class="statistik-sidebar-body">
+            <div class="statistik-sidebar-body" id='article_list' >
                 <ul class="statistik-list">
                     <li>
-                        <input type="checkbox" name="" id="0990">
+                        <input type="checkbox" name="" id="0990" value="0990">
                         <label for="0990">Убийство (ст.99)</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="" id="1000">
+                        <input type="checkbox" name="" id="1000" value="1000">
                         <label for="1000">Убийство матерью новорожденного ребенка (ст.100)</label>
                     </li>
                     <li>
-                        <input type="checkbox"  id="1010">
+                        <input type="checkbox"  id="1010" value="1010">
                         <label for="1010">Убийство, совершенное в состоянии аффекта (ст.101)</label>
                     </li>
                     <li>
@@ -281,9 +285,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="tabs-body">
-                    <div class="tabs-body__item active">
-                        <div w3-include-html="map/allrepublic.html"></div>
+                <div class="tabs-body" style="overflow: hidden;">
+                    <div class="tabs-body__item active" id='map_box'>
+
                     </div>
                     <div class="tabs-body__item">
                         <div id="chart-bar_1"></div>
@@ -297,9 +301,10 @@
     <script src="lib_js/highcharts.js"></script>
     <script src="lib_js/jquery-ui-1.js"></script>
 
-    <script src="new_js/datepicker.js"></script>
-    <script src="new_js/map_control.js"></script>
-    <script src="new_js/diagramm.js"></script>
-
+    <script src="js/datepicker.js"></script>
+    <script src="js/filter_control.js"></script>
+    <script src="js/map_control.js"></script>
+    <script src="js/diagramm.js"></script>
+    <script src="js/tab.js"></script>
 </body>
 </html>
