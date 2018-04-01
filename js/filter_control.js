@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     $('#article_list').hide();
     $('#type_list input:checkbox').on('click', function() {
@@ -13,7 +14,6 @@ $(document).ready(function() {
             $box.prop("checked", false);
 
             changeType(false);
-            console.log( 0);
         }
     });
 
@@ -26,6 +26,24 @@ $(document).ready(function() {
             $('#article_list').show();
         else
             $('#article_list').hide();
-        console.log(type_id);
     }
+
+    $('#filter').click(function(){
+        var data = $('#datepicker').val();
+        var type = $( "#type_list input:checked" ).attr('id');
+        var ar_art = [];
+
+        $('#article_list input:checked').each(function(i, art) {
+            ar_art.push($(this).attr('id'));
+        });
+
+        if (data == '' || type == undefined )
+            return false;
+
+
+        type = parseInt(type);
+
+
+        MAIN_DATA.getData(data, type, ar_art);
+    });
 });
