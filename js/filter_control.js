@@ -17,9 +17,6 @@ $(document).ready(function() {
         }
     });
 
-    $('#datepicker').change(function(){
-        console.log( $(this).val());
-    });
 
     function changeType(type_id){
         if (type_id == 5)
@@ -46,4 +43,11 @@ $(document).ready(function() {
 
         MAIN_DATA.getData(data, type, ar_art);
     });
+
+    $('.js_get_data_type').click(function(){
+        $('.js_get_data_type').removeClass('active');
+        $(this).addClass('active');
+
+        MAIN_DATA.changeType($(this).data('val'));
+    })
 });

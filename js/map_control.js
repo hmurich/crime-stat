@@ -1,4 +1,5 @@
 var MAP_BOX = document.querySelector('#map_box');
+
 includeHtml('map/allrepublic.html', MAP_BOX);
 includeHtml('map/almaty_city.html', MAP_BOX);
 includeHtml('map/astana_city.html', MAP_BOX);
@@ -26,11 +27,28 @@ $(document).ready(function() {
     $('.js_svg_obl_background').click(function(){
         $('.svg_obl').hide();
         $('#svg_all_rep').show();
+
+
+        var obl = document.querySelector('.svg_obl.active');
+        obl.classList.remove('active');
+
+        var obl = document.querySelector('#svg_all_rep');
+        obl.classList.add('active');
+
+        MAP.init();
     });
 
     $('.js_sel_obl').click(function(){
         var id = $(this).data('id');
         $('#svg_all_rep').hide();
         $('#svg_obl_'+id).show();
+
+        var obl = document.querySelector('#svg_all_rep');
+        obl.classList.remove('active');
+
+        var obl = document.querySelector('#svg_obl_'+id);
+        obl.classList.add('active');
+
+        MAP.init();
     });
 });

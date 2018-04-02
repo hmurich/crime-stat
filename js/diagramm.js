@@ -5,9 +5,6 @@ Highcharts.chart('chart-bar_1', {
     title: {
         text: 'Browser market shares. January, 2015 to May, 2015'
     },
-    subtitle: {
-        text: 'Click the columns to view versions. Source: <a href="http://netmarketshare.com">netmarketshare.com</a>.'
-    },
     xAxis: {
         type: 'category'
     },
@@ -15,7 +12,6 @@ Highcharts.chart('chart-bar_1', {
         title: {
             text: 'Total percent market share'
         }
-
     },
     legend: {
         enabled: false
