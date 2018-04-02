@@ -15,7 +15,6 @@ class MainData {
         }
         where += "AND DATE_REP = DATE '"+y+"-"+m+"-"+d+"'";
 
-        console
 
         this.data = {};
         this.data_total = {};
