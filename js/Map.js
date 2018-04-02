@@ -1,11 +1,11 @@
 class Map {
     init(){
         this.data = MAIN_DATA.data;
+        this.dom = document.querySelector('.svg_obl.active');
+
         this.setData();
     }
     setData(){
-        this.dom = document.querySelector('.svg_obl.active');
-
         let ar = this.dom.querySelectorAll('.land_name');
         for (let k in ar){
             let land_name = ar[k];
