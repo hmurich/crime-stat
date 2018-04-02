@@ -8,7 +8,10 @@ class Map {
             this.obl_id = parseInt(this.dom.getAttribute('data-id'));
         }
 
+
         this.setData();
+
+        DIAGRAMM.init();
     }
     setData(){
         let ar = this.dom.querySelectorAll('.land_name');
@@ -29,10 +32,3 @@ class Map {
 }
 
 var MAP = new Map();
-if (MAP.obl_id == 0)
-    /*
-    all rep
-    */
-else {
-    
-}

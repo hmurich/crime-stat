@@ -26,7 +26,7 @@ class MainData {
         }
 
         where += "AND DATE_REP = DATE '"+y+"-"+m+"-"+d+"'";
-        
+
 
         this.data = {};
         this.data_total = {};
@@ -41,7 +41,6 @@ class MainData {
                 return false;
             }
             obj.parseData(data.features);
-
         });
 
     }
