@@ -12,6 +12,7 @@ class Map {
         this.setData();
 
         DIAGRAMM.init();
+        CRIME_TABLE.init();
     }
     setData(){
         let ar = this.dom.querySelectorAll('.land_name');
