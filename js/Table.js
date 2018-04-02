@@ -1,9 +1,10 @@
 class CrimeTable{
     constructor(body_selector){
         this.body_dom = document.querySelector(body_selector);
-        this.body_dom.innerHTML = '';
+
     }
     init(){
+        this.body_dom.innerHTML = '';
         this.obl_id = MAP.obl_id;
 
         this.data_1 = MAIN_DATA.data_total;
