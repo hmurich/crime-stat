@@ -13,9 +13,20 @@ class MainData {
         if (type != 5){
             where += "CRIME_CODE ='"+type+"' ";
         }
+        else if (ar_art.length > 0){
+            where += 'CRIME_CODE IN (';
+            for (let k in ar_art){
+                where += "'"+ar_art[k]+"',";
+            }
+            where = where.substring(0, where.length - 1);
+            where += ') ';
+        }
+        else {
+            where += "CRIME_CODE ='"+type+"' ";
+        }
+
         where += "AND DATE_REP = DATE '"+y+"-"+m+"-"+d+"'";
-
-
+        
         this.data = {};
         this.data_total = {};
         this.data_10 = {};
@@ -23,7 +34,7 @@ class MainData {
         let obj = this;
         $.get( "http://infopublic.pravstat.kz:8399/arcgis/rest/services/stat/MapServer/1/query?f=pjson&where="+where+"&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=CRIME_CODE%2CREG_CODE%2CK10%2CK%2CCODE&returnGeometry=false&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&returnDistinctValues=false", function( data ) {
             data = JSON.parse(data);
-
+            console.log(data);
             if (data.features.length == 0){
                 alert('Нету данных');
                 return false;
