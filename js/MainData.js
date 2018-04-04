@@ -10,7 +10,7 @@ class MainData {
         let y = date.getFullYear();
 
         let where = ""
-        if (type != 5){
+        if (type != 45){
             where += "CRIME_CODE ='"+type+"' ";
         }
         else if (ar_art.length > 0){
@@ -21,9 +21,7 @@ class MainData {
             where = where.substring(0, where.length - 1);
             where += ') ';
         }
-        else {
-            where += "CRIME_CODE ='"+type+"' ";
-        }
+       
 
         where += "AND DATE_REP = DATE '"+y+"-"+m+"-"+d+"'";
 
@@ -37,7 +35,7 @@ class MainData {
         let obj = this;
         $.get( "http://infopublic.pravstat.kz:8399/arcgis/rest/services/stat/MapServer/1/query?f=pjson&where="+where+"&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=K%2CK10%2CCODE%2CNAME%2CLAST_K%2CBEFORE_LAST_K&returnGeometry=false&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&returnDistinctValues=false", function( data ) {
             data = JSON.parse(data);
-            console.log(data);
+            //console.log(data);
             if (data.features.length == 0){
                 alert('Нету данных');
                 return false;
@@ -89,7 +87,7 @@ class MainData {
 
         this.setFinishData();
 
-        console.log(this.data_total, this.data_total_last_1, this.data_total_last_2);
+        //console.log(this.data_total, this.data_total_last_1, this.data_total_last_2);
     }
     changeType(type){
         if (type == 'all')

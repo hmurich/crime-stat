@@ -7,7 +7,6 @@
     <link rel="shortcut icon" href="images/logo-small.png" type="image/png">
     <title>Карта уголовных правонарушений</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/png"/>
-    <link rel="stylesheet" href="flat/flat.css">
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/statistic.css"/>
     <link rel="stylesheet" href="css/param.css"/>
@@ -57,14 +56,19 @@
             </div>
            <div class="date-filtr">
                 <label class="label-statistic">Выберите дату:</label>
+                <div class="date-conent">
+                <span>С начала года</span>
                 <input type='date' id='datepicker' placeholder="Выберите дату">
+                </div>
             </div>
-            <input type="submit" id='filter'>
-
-            <div class="statistik-sidebar-body" style="border-bottom: 5px solid #c0c0c0;" id='type_list'>
+          
+            <div class="statistik-sidebar-head">
+                Категории
+            </div>
+            <div class="statistik-sidebar-body"  id='type_list'>
                 <ul class="statistik-list" >
                     <li>
-                        <input type="checkbox" name="type" id="0">
+                        <input type="checkbox" name="type" id="0" checked="checked" >
                         <label for="0">Все</label>
                     </li>
                     <li>
@@ -91,12 +95,17 @@
                         <input type="checkbox" name="type" id="6">
                         <label for="6">Проступки</label>
                     </li>
+                    <li>
+                        <input type="checkbox" name="type" id="45">
+                        <label for="45">Статьи</label>
+                    </li>
                 </ul>
             </div>
             <div class="statistik-sidebar-body" id='article_list' >
+
                 <ul class="statistik-list">
                     <li>
-                        <input type="checkbox" name="" id="0990" value="0990">
+                        <input type="checkbox" name="" id="0990" value="0990" >
                         <label for="0990">Убийство (ст.99)</label>
                     </li>
                     <li>
@@ -253,6 +262,10 @@
                     </li>
                 </ul>
             </div>
+            <div class="filt-button">
+                 <input type="submit" class="button" id='filter' value="Показать">
+            </div>
+             
         </div>
         <div class="statistik-content">
             <div class="tabs">
@@ -263,7 +276,7 @@
                         <li>Статистика</li>
                     </ul>
                     <div class="title-statics">
-                        Статистика по правонарушениям  <span>Убийство (ст.99)</span>
+                        Статистика по правонарушениям  <span class="statia"></span><span class="statia2"></span> 
                     </div>
                     <div class="statistik-content-head-top">
                         <div class="statistik-content-head-top-left">
@@ -290,8 +303,10 @@
                     </div>
                 </div>
                 <div class="tabs-body" style="overflow: hidden;">
-                    <div class="tabs-body__item active" id='map_box'>
-
+                    <div class="back-map" style="display: none;"><img src="images/map-back.png"></div>
+                    <div class="tabs-body__item active" >
+                        <div id='map_box'>
+                        </div>
                     </div>
                     <div class="tabs-body__item">
                         <div id="chart-bar_1"></div>
@@ -306,7 +321,7 @@
                                     <th>2016</th>
                                 </tr>
                                 <tr>
-                                    <th >Значение</th>
+                                    <th style="text-align:center">Значение</th>
                                     <th >Прирост</th>
                                     <th >Значение</th>
                                     <th >Прирост</th>
@@ -314,7 +329,7 @@
                                 </tr>
                             <tbody id='crime_table_body'>
                                 <tr>
-                                    <td >Example reg</td>
+                                    <td >Регион</td>
                                     <td >Значение</td>
                                     <td >Прирост</td>
                                     <td >Значение</td>
@@ -324,6 +339,7 @@
                             </tbody>
                         </table>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -333,15 +349,14 @@
     <script src="lib_js/jquery.js"></script>
     <script src="lib_js/highcharts.js"></script>
     <script src="lib_js/jquery-ui-1.js"></script>
-
     <script src="js/Dict.js"></script>
-    <script src="js/Diagramm.js"></script>
-    <script src="js/Table.js"></script>
-    <script src="js/Map.js"></script>
-    <script src="js/MainData.js"></script>
     <script src="js/filter_control.js"></script>
     <script src="js/map_control.js"></script>
-
+    <script src="js/diagramm.js"></script>
+    <script src="js/Map.js"></script>
+    <script src="js/MainData.js"></script>
     <script src="js/tab.js"></script>
+    <script src="js/my.js"></script>
+     <script src="js/Table.js"></script>
 </body>
 </html>

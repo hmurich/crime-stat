@@ -53,7 +53,7 @@ class CrimeTable{
                                         "</tr>";
         }
 
-        console.log(this.body_dom);
+        //console.log(this.body_dom);
     }
 
 }

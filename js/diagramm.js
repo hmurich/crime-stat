@@ -4,34 +4,47 @@ class Diagramm {
 
         this.conf = {
             chart: {
-                type: 'bar'
+                type: 'bar',
+                height: 600,
             },
             title: {
                 text: 'Регионы в цифрах'
             },
             xAxis: {
                 categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+                labels: {
+                style: {
+                    color: '#000',
+                    fontSize: '16px',
+                }
+            },
+
                 title: {
-                    text: null
+                    text: "Регионы",
+                    style: {"fontSize": "16px" },
                 }
             },
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Population (millions)',
+                    text: 'Значение',
                     align: 'high'
                 },
                 labels: {
-                    overflow: 'justify'
+                    overflow: 'justify',
+                    name: 'Значение',
+
                 }
             },
             tooltip: {
-                valueSuffix: ' millions'
+                valueSuffix: '  '
             },
             plotOptions: {
                 bar: {
                     dataLabels: {
-                        enabled: true
+                        enabled: true,
+                        text: 'Значение',
+                        style: {"fontSize": "14px" },
                     }
                 }
             },
@@ -42,8 +55,7 @@ class Diagramm {
                 enabled: false
             },
             series: [{
-                name: 'Year 1800',
-                data: [107, 31, 635, 203, 2]
+               
             }]
         };
     }

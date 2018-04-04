@@ -406,7 +406,9 @@ html, body {
     overflow: hidden;
     z-index: 5;
 }
-
+#map_box {
+    height: 450px;
+}
 #tools, #mapSpace { position: absolute; }
 #tools, #mapSpace { overflow: hidden; padding: 0px; }
 #tools {
@@ -641,9 +643,11 @@ html, body {
 .date-filtr input {
     display: inline-block;
     height: 30px;
-    width: 99%;
-    text-indent: 15px;
+    width: 150px;
+    /* text-indent: 15px; */
     border: 1px solid #d8d8d8;
+    text-align: center;
+    padding-right: 0;
 }
 .statistik-content-head {
     border-bottom: 1px solid #d8d8d8;
@@ -696,7 +700,7 @@ html, body {
 .statistik-list {
     height: 100%;
     max-height: 600px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .tabs-head li.active{
     background-color:#007d8f;
@@ -705,9 +709,11 @@ html, body {
 }
 .label-statistic {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 14px;
     font-weight: bold;
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 5px;
 }
 .select-statistic {
     display: inline-block;
@@ -828,4 +834,89 @@ html, body {
     font-weight: bold;
     margin-bottom: 15px;
     font-size: 18px;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 9px 35px;
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    font-size: 16px;
+    border: 1px solid #d8d8d8;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #007d8f;
+    color: #Fff;
+}
+.button-stats.js_get_data_type.active{
+     background-color: #007d8f;
+    color: #Fff;
+}
+.filt-button {
+    text-align: center;
+    padding: 10px 0;
+}
+.statia2 {
+    display: block;
+}
+
+.back-map {
+    position: absolute;
+    width: 150px;
+    left: 150px;
+    top: 50px;
+}
+.back-map img{
+    
+    width: 100%;
+}
+.tabs-body {
+    position: relative;
+}
+
+#crime_table {
+    width: 100%;
+}
+#crime_table tr th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #007d8f;
+    color: white;
+}
+#crime_table{
+    font-size: 16px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+#crime_table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+#crime_table td, #crime_table th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+#crime_table td:first-child, #crime_table th:first-child {
+    text-align: left;
+}
+.statia2 span{
+    margin-right: 10px;
+}
+.date-filtr span {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+.date-conent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

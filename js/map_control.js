@@ -24,11 +24,11 @@ $(document).ready(function() {
     $('.svg_obl').hide();
     $('#svg_all_rep').show();
 
-    $('.js_svg_obl_background').click(function(){
-        $('.svg_obl').hide();
-        $('#svg_all_rep').show();
+    $('.js_svg_obl_background,.back-map').click(function(){
+        $('.svg_obl').hide(800);
+        $('#svg_all_rep').fadeIn(800);
 
-
+        $('.back-map').hide(800);
         var obl = document.querySelector('.svg_obl.active');
         obl.classList.remove('active');
 
@@ -40,9 +40,9 @@ $(document).ready(function() {
 
     $('.js_sel_obl').click(function(){
         var id = $(this).data('id');
-        $('#svg_all_rep').hide();
-        $('#svg_obl_'+id).show();
-
+        $('#svg_all_rep').hide(800);
+        $('#svg_obl_'+id).fadeIn(800);
+        $('.back-map').fadeIn(800);
         var obl = document.querySelector('#svg_all_rep');
         obl.classList.remove('active');
 

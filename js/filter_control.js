@@ -19,10 +19,12 @@ $(document).ready(function() {
 
 
     function changeType(type_id){
-        if (type_id == 5)
+        if (type_id == 45)
             $('#article_list').show();
+            
         else
             $('#article_list').hide();
+            
     }
 
     $('#filter').click(function(){

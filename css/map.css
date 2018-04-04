@@ -10,3 +10,10 @@
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
 }
+
+#map_box {
+    height: 450px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
